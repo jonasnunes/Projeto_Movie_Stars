@@ -1,6 +1,16 @@
 <?php 
     include_once("config/globals.php");  
     include_once("config/connection.php");  
+    include_once("models/message.php");
+
+    $message = new Message($BASE_URL);
+
+    $flassMessage = $message->getMessage();
+
+    if(!empty($flassMessage["msg"])){
+        // Limpar a mensagem
+        $message->clearMessage();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -14,11 +24,11 @@
     <!-- FAVICON -->
     <link rel="shortcut icon" href="<?=$BASE_URL?>img/moviestar.ico" type="image/x-icon">
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="<?=$BASE_URL?>css/styles.css">
-
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css" integrity="sha512-bR79Bg78Wmn33N5nvkEyg66hNg+xF/Q8NA8YABbj+4sBngYhv9P8eum19hdjYcY7vXk/vRkhM3v/ZndtgEXRWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="<?=$BASE_URL?>css/styles.css">
 
     <!-- FONTAWESOME -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css' integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==' crossorigin='anonymous' referrerpolicy='no-referrer' />
@@ -32,11 +42,11 @@
     <header>
         <nav id="main-navbar" class="navbar navbar-expand-lg">
             <a href="<?=$BASE_URL?>" class="navbar-brand">
-                <img src="<?=$BASE_URL?>img/logo.svg" alt="Movie Star" class="logo">
+                <img src="<?=$BASE_URL?>img/logo.svg" alt="Movie Star" class="logo" width="50">
                 <span class="moviestar-title">MovieStar</span>
             </a>
-            <!-- MENU HAMBURGUER -->
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- MENU HAMBURGUER 
+            <button class="navbar-toggle" type="submit" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <!-- FIM DO MENU HAMBURGUER -->
@@ -55,6 +65,9 @@
             </div>
         </nav>
     </header>
-    <div id="main-container" class="container-fluid">
-        <h1>Corpo</h1>
-    </div>
+    <?php if(!empty($flassMessage["msg"])): ?>
+        <div class="msg-container">
+            <p class="msg <?=$flassMessage["type"]?>"><?=$flassMessage["msg"]?></p>
+        </div>
+    <?php endif; ?>
+    
