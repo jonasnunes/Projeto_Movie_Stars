@@ -5,5 +5,5 @@
 <h1 align="center">Projeto Movie Star</h1>
 
 <p align="center">
-<img src="https://img.shields.io/static/v1?label=STATUS&message=EM ANDAMENTO&color=GREEN&style=for-the-badge">
+<img src="https://img.shields.io/static/v1?label=STATUS&message=EM DESENVOLVIMENTO&color=GREEN&style=for-the-badge">
 </p>
