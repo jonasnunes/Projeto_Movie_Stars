@@ -130,6 +130,33 @@ div#main-container{
     border-color: #f5c518;
 }
 
+/* EDIT PROFILE */
+#profile-image-container{
+    width: 150px;
+    height: 150px;
+    border: 6px solid #f5c518;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+    margin: 0.9325rem auto;
+}
+
+.page-description{
+    color: #999;
+}
+
+#bio{
+    max-width: 400px;
+}
+
+.disabled{
+    background-color: #ccc;
+}
+
+#change-password-container{
+    margin-top: 1.875rem;
+}
+
 /* FOOTER */
 #footer{
     background-color: #000;
