@@ -6,6 +6,10 @@
     text-decoration: none;
 }
 
+label{
+    margin-block: .7rem;
+}
+
 /* NAVBAR */
 header nav a.navbar-brand{
     position: relative;
@@ -111,11 +115,6 @@ div#main-container{
     margin: 1.2rem auto;
 }
 
-#login-container form label,
-#register-container form label{
-    margin-block: .7rem;
-}
-
 .card-btn{
     color: #000;
     background-color: #f5c518;
@@ -155,6 +154,31 @@ div#main-container{
 
 #change-password-container{
     margin-top: 1.875rem;
+}
+
+/* NEW MOVIE */
+.new-movie-container{
+    text-align: center;
+}
+
+#add-movie-form{
+    text-align: left;
+}
+
+.movie-image-container{
+    height: 400px;
+    min-width: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.page-title:after{
+    content: "";
+    width: 300px;
+    border-bottom: 2px solid #f5c518;
+    display: block;
+    margin: 0 auto;
+    padding-top: 7px;
 }
 
 /* FOOTER */

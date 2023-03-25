@@ -51,11 +51,13 @@
                 <img src="<?=$BASE_URL?>img/logo.svg" alt="Movie Star" class="logo" width="50">
                 <span class="moviestar-title">MovieStar</span>
             </a>
+
             <!-- MENU HAMBURGUER 
             <button class="navbar-toggle" type="submit" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
-            <!-- FIM DO MENU HAMBURGUER -->
+            FIM DO MENU HAMBURGUER -->
+
             <form action="" method="GET" id="search-form" class="form-inline my-2 my-lg-0">
                 <input type="text" name="q" id="search" class="form-control mr-sm-2" type="search" placeholder="Buscar filmes" aria-label="search">
                 <button class="btn my-2 my-sm-0" type="submit">
@@ -74,7 +76,7 @@
                             <a href="<?=$BASE_URL?>dashboard.php" class="nav-link">Meus Filmes</a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?=$BASE_URL?>editprofile.php" class="nav-link"><?=$userData->name?></a>
+                            <strong><a href="<?=$BASE_URL?>editprofile.php" class="nav-link"><?=$userData->name?></a></strong>
                         </li>
                         <li class="nav-item">
                             <a href="<?=$BASE_URL?>logout.php" class="nav-link">Sair</a>
