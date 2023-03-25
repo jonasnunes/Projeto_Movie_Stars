@@ -26,7 +26,7 @@
                 <div class="form-group">
 
                     <label for="title">Título</label>
-                    <input class="form-control" type="text" id="title" name="title" placeholder="Digite o título do seu filme">
+                    <input class="form-control" type="text" id="title" name="title" placeholder="Digite o título do seu filme" required>
 
                 </div>
 
@@ -47,7 +47,7 @@
                 <div class="form-group">
 
                     <label for="category">Categoria</label>
-                    <select name="category" id="category" class="form-control">
+                    <select name="category" id="category" class="form-control" required>
                         <option value="">Selecione</option>
                         <option value="Ação">Ação</option>
                         <option value="Drama">Drama</option>
@@ -68,7 +68,7 @@
                 <div class="form-group">
 
                     <label for="description">Descrição</label>
-                    <textarea style="resize: none;" class="form-control" id="description" name="description" placeholder="Insira uma descrição sobre o filme" rows="5"></textarea>
+                    <textarea style="resize: none;" class="form-control" id="description" name="description" placeholder="Insira uma descrição sobre o filme" rows="5" required></textarea>
 
                 </div>
 
